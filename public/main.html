@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="public/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="public/css/bootstrap.css">
+    <link rel="stylesheet" href="public/css/fontawesome-all.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="public/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="public/css/main.css">
+    <link rel="stylesheet" href="public/css/animate.css">
+
+</head>
+
+<body>
+
+    <div class="popup">
+        <button id="close" class="fa fa-times-circle"></button>
+        <div>
+            <ul>
+
+
+            </ul>
+
+        </div>
+        <div>
+
+        </div>
+    </div>
+
+    <section  class ="header">
+        <div class ="Logo">
+            <a href = "/?page=main"><img src="public/img/Logo.png" alt ="Logo"></a>
+        </div>
+        <div class = "Menu">
+            <nav class="slideMenu">
+                <a href="#" class="menu-trigger">Menu</a>
+                <ul>
+                    <li><a href ="/?page=main">Расходы</a></li>
+                    <li><a href ="/?page=budget">Планирование бюджета</a></li>
+                    <li><a href ="/?page=statistics">Статистика</a></li>
+                    <li><a href ="/?page=exit">Выход</a></li>
+                </ul>
+            </nav>
+        </div>
+
+    </section>
+    
+    
+    <section class="body">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-3">
+          <div class ="part0">
+                <div class="circleMain animated slideInLeft">
+                    <div class="parent">
+
+                        <div><h3>Остаток </h3>
+                        <span id="left">0грн.</span>
+                        </div>
+
+                    </div>
+                    <div class="parent2">
+
+                        <div>
+                            <span id="spnd">0грн.</span>
+                            <h3>Потрачено</h3>
+                        </div>
+
+                    </div>
+                </div>
+          </div>
+                </div>
+                <div class="col-md-3">
+           <div class="part1">
+                <div data-type="deposit" class="circles purple animated zoomIn">
+               
+                 <i class="fa fa-money-bill-wave"></i>
+  <!--                    <p>Депозит</p>-->
+                </div>
+                
+                <div data-type="loan" class="circles yellow animated zoomIn">
+                    <i class="fa fa-credit-card"></i>
+<!--                    <p>Кредит</p>-->
+                </div>
+           </div>
+                </div>
+                <div class="col-md-3">
+           <div class="part2">
+                <div data-type="shopping" class="circles green animated zoomIn">
+                  
+                    <i class="fa fa-tshirt"></i>
+<!--                    <p>Одежда</p>-->
+                </div>
+
+        
+                <div data-type="communal" class="circles blue animated zoomIn">
+               
+                     <i class="fa fa-home"></i>
+<!--                    <p>Коммунальные платежи</p>-->
+                </div>
+                <div data-type="food" class="circles pink animated zoomIn">
+                     <i class="fa fa-utensils"></i>
+<!--                    <p>Еда</p>-->
+                </div>
+     
+           </div> 
+                </div>
+                <div class="col-md-3">
+           <div class ="part3">
+                <div data-type="vehicle" class="circles grey animated zoomIn">
+               
+                     <i class="fa fa-car"></i>
+                    
+<!--                    <p>Транспорт</p>-->
+                </div>
+                <div data-type="entertainment" class="circles greenlight animated zoomIn">
+                
+                     <i class="fa fa-film"></i>
+                
+<!--                    <p>Развлечения</p>-->
+                </div>
+                <div data-type="medicine" class="circles orange animated zoomIn">
+               
+                     <i class="fa fa-prescription-bottle-alt"></i>
+<!--                    <p>Медицинские расходы</p>-->
+                </div>
+                <div data-type="small" class="circles red animated zoomIn">
+               
+                     <i class="fa fa-ellipsis-h"></i>
+<!--                    <p>Мелкие расходы</p>-->
+                </div>
+           </div>
+           </div>
+        </div>
+        </div>
+    </section>
+   
+    
+    
+    
+    <section class="footer"></section>
+</body>
+<script src="public/js/main.js?23453243"></script>
+<script src="public/js/main2.js"></script>
+</html>

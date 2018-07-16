@@ -1,0 +1,471 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+}
+/*------budget--------*/
+
+.extrafield{
+    display:none;
+}
+.toltip{
+    width:200px;
+    min-height:50px;
+    padding:10px;
+    text-align: center;
+    background:black;
+    color:white;
+    position:absolute;
+    z-index:777;
+    display:none;
+    border-radius:10px;
+    box-shadow: 0 0 10px black;
+}
+.spend{
+    width:250px;
+    height:120px;
+    background: white;
+    padding:10px;
+    border-radius:5px;
+    box-shadow: 0 0 10px grey;
+    position:absolute;
+    z-index: 888;
+    text-align: center;
+}
+.spend input, .spend button{
+    width:100%;
+    height:30px;
+    margin-bottom:5px;
+}
+.spend #delete{
+    border:none;
+    background: none;
+    width:20%;
+    height:20%;
+    padding:0;
+    margin-left:85%;
+    margin-top:-20px;
+    font-size:17px;
+    color:red;
+}
+/*---------------------------main circles click ----------------------------------------------------*/
+.popup{
+    padding-top:100px;
+    position:fixed;
+    z-index:999;
+    width:300px;
+    background: rgba(69,42,255,0.5);
+    right:-300px;
+    top:0;
+    transition:0.5s;
+    height:100%;
+}
+.popupShow{
+    transform: translate(-300px,0) !important;
+}
+.popup #close{
+    border:none;
+    background:none;
+    position:absolute;
+    left: 10px;
+    top:10px;
+    color:red;
+    font-size:35px;
+}
+.popup div{
+    width:290px;
+    min-height:100px;
+    margin:0 auto;
+    color: #FFF;
+    text-align:center;
+}
+.popup hr{
+    border: 1px solid white;
+}
+.popup p {
+    font-size:20px;
+    padding-bottom:0;
+}
+.popup div ul{
+    width:80%;
+    margin:0 auto;
+    list-style: none;
+    font-size: 16px;
+}
+.popup  i {
+    text-align:center;
+    font-size:40px;
+    color:white;
+}
+@font-face {
+    font-family: "atrian1";
+    src: url(../fonts/Atrian1.ttf);
+}
+@font-face {
+    font-family: "atrian3";
+    src: url(../fonts/Atrian3.ttf);
+}
+@font-face {
+    font-family: "trench";
+    src: url(../fonts/trench100free.ttf);
+}
+@font-face {
+    font-family: "Sans";
+    src: url(../fonts/LiberationSans-Regular.ttf);
+}
+body {
+    /*background: #2FDAD4;*/
+     background: rgba(47,218,212, .5) ;
+}
+/*---------------------------statistics.html----------------------------------------------------*/
+.chart{
+    width:900px;
+    min-height:500px;
+    margin:0 auto;
+    margin-top:50px;
+}
+/*---------------------------header----------------------------------------------------*/
+.header{
+    width:100%;
+    height: 80px;
+    background: white;
+}
+.header .Logo{
+    width: 200px;
+    height: inherit;
+    float: left;
+    padding-top:20px;
+    margin-left:30px;
+}
+.header .Logo img {
+    width: 100%;
+    height: auto;
+    
+}
+.header .Menu{
+    width: 700px;
+    height: inherit;
+    /*float: right;*/
+    left:48%;
+    position:absolute;
+}
+.header ul{
+    width: inherit;
+    height: inherit;
+    padding-top: 15px;
+}
+.header li{
+    list-style: none;
+    width:171px;
+    height: 50px;
+    display: inline-block;
+    border-right: 1px solid rgba(0,0,0,0.2);
+    /*font-family: "trench",sans-serif;*/
+
+}
+.header li:nth-child(3){
+    width: 140px;
+}
+.header li:nth-child(2){
+    width: 202px;
+}
+.header li:last-child{
+    border: none;
+}
+.header li a{
+    width: inherit;
+    height: inherit;
+    display: block;
+    text-align: center;
+    line-height: 50px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight:500;
+    font-family:"trench";
+    color:rgba(0,0,0,0.8);
+}
+
+.menu-trigger {
+    padding-top: 20px;
+    display:none;
+    color:black;
+    float:left;
+    z-index:999;
+}
+
+
+@media screen and (max-width:840px) {
+    .header .slideMenu{
+        display:flex;
+        flex-direction: column;
+        z-index:999;
+        float:left;
+        poition:fixed;
+    }
+    .header .Menu{
+        left:10%;
+        position:absolute;
+        z-index:999;
+    }
+
+    .menu-trigger {
+        display:block;
+        background:white;
+        float:left;
+        width:100px;
+        left:20%;
+
+        z-index:999;
+    }  .menu-trigger a{
+        left:20%;
+    }
+    .header nav ul li {
+        display:block;
+        border-top:1px #79896D solid;
+        background:white;
+    }
+    .header nav ul {
+        display:none;
+    }
+    .Logo{
+        display: none;
+    }
+    .header li:nth-child(3){
+        width: 171px;
+    }
+    .header li:nth-child(2){
+        width: 171px;
+    }
+    .header li:last-child{
+        border-top:1px #79896D solid;
+    }
+}
+
+/*-------------------body background----------------*/
+.body{
+    width: 100%;
+    min-height: 570px;
+    background: #96ECE9;
+}
+/*---------------------------main.html----------------------------------------------------*/
+.body .part0, .body .part1, .body .part2, .body .part3 {
+    display: inline-block;
+    width:200px;
+    height: 600px;
+    margin: 0 auto;
+    float:left;
+}
+.body .part0 {
+    position: relative;
+    float:left;
+}
+.body .part1 {
+    padding-top: 170px;
+}
+.body .part1 i, .body .part2 i, .body .part3 i{
+    font-size: 50px;
+    color: rgba(0, 0, 0, 0.5);
+    line-height: 120px;
+
+}
+.body .part2 {
+    padding-top: 120px;
+}.body .part3 {
+    padding-top: 70px;
+}
+.body .part1, .body .part2, .body .part3 {
+    width: 25%;
+}
+.body .circleMain{
+    width: 300px;
+    height: 300px;
+    background: grey;
+    border-radius: 50%;
+    position: absolute;
+    left: -170px;
+    top: 50%;
+    margin-top:-150px;
+    overflow:hidden;
+}
+.circleMain .parent{
+    width:300px;
+    height:150px;
+    background:rgba(0,217,51,0.8);
+    position: relative;
+}
+.parent div{
+    width:100px;
+    position:absolute;
+    right:20px;
+    bottom:20px;
+}
+.parent h3{
+    font-size:18px;
+}
+.parent span{
+    font-size:15px;
+    color:white;
+}
+.circleMain .parent2{
+    width:300px;
+    height:150px;
+    background:rgba(255,19,7,1);
+    position:relative;
+}
+.parent2 div{
+    width:100px;
+    position:absolute;
+    right:20px;
+    top:20px;
+}
+.parent2 h3{
+    font-size:18px;
+}
+.parent2 span{
+    font-size:15px;
+    color:white;
+}
+.body .circles{
+    width: 120px;
+    height: 120px;
+    border-radius:50%;
+    background: grey;
+    border:2px solid white;
+    margin: 0 auto;
+    text-align: center;    
+}
+.circles:hover{
+    background:white !important;
+    cursor:pointer;
+    transition:1s;
+    border: 2px solid black;
+}
+.circles:hover i {
+    color:black !important;
+
+}
+.toltipMain{
+    background: white;
+    width:120px;
+    height:120px;
+    padding-top:43px;
+    position:absolute;
+    z-index:777;
+    display:none;
+    border-radius:50%;
+    box-shadow:0 0 10px white;
+    font-size:14px;
+    text-align:center;
+    transition:1s;
+}
+.toltipText{
+    font-family:'trench';
+    font-size:14px;
+}
+.toltipMain span {
+    position:absolute;
+    top:-10px;
+    left:0;
+    color:red;
+    font-size:10px;
+    display:block;
+    background: white;
+    border-radius: 10px;
+
+
+}
+/*---------------------------footer----------------------------------------------------*/
+.footer{
+    width: 100%;
+    height: 40px;
+    background: black;
+    position: fixed;
+    left: 0;
+    bottom:0;
+}
+/*---------------------------circleColors----------------------------------------------------*/
+.purple {
+    background: #AD63C6 !important;
+}
+.yellow{
+    background: #EDE1B1 !important;
+}
+.red{
+    background: #FF5F5F !important;
+}
+.grey{
+    background: #AFB0B5 !important;
+}
+.pink{
+    background: #FF6D99 !important;
+}
+.orange{
+    background: #FF9B7B !important; 
+}
+.green{
+    background: #01AC8A !important;
+    
+}
+.greenlight{
+    background: #ADCC30 !important;
+}
+.blue{
+    background: #B2849D !important;
+}
+/*---------------------------Login&&Registration----------------------------------------------------*/
+.form {
+    padding-top: 120px;
+}
+
+.loginLogo {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 30px;
+}
+
+.registerH2 {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+}
+/*---------------------------budget.html----------------------------------------------------*/
+.bicon{
+    width: 150px;
+    height:150px;
+    margin: 50px auto;
+    text-align: center;
+    transition:0.5s;
+
+
+}
+.bicon:hover{
+    background:white !important;
+    cursor:pointer;
+}
+.bicon:hover i {
+    color:black !important;
+}
+.bicon i{
+    font-size: 3em;
+    line-height: 150px;
+    color:white;
+    transition:0.5s;
+}
+.budget {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.budget h3{
+    display:block;
+    width:100%;
+    text-align: center;
+    font-family:Sans;
+}
+.b {
+    padding-bottom: 50px;
+}

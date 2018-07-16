@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="public/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="public/css/bootstrap.css">
+    <link rel="stylesheet" href="public/css/fontawesome-all.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="public/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="public/css/main.css">
+
+</head>
+
+<body>
+
+
+<div class="window"></div>
+    <section  class ="header">   
+         <div class ="Logo">
+             <a href = "/?page=main"><img src="public/img/Logo.png" alt ="Logo"></a>
+
+         </div>
+         <div class = "Menu">
+             <nav class="slideMenu">
+             <a href="#" class="menu-trigger">Menu</a>
+         <ul>
+             <li><a href ="/?page=main">Расходы</a></li>
+             <li><a href ="/?page=budget">Планирование бюджета</a></li>
+             <li><a href ="/?page=statistics">Статистика</a></li>
+             <li><a href ="/?page=exit">Выход</a></li>
+         </ul>
+             </nav>
+         </div>
+
+    </section>
+    <div class="container-fluid b">
+        <div class ="container budget">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item active" aria-current="page">ВНЕСТИ ЧЕК</li>
+                </ol>
+            </nav>
+
+            <div class ="row">
+                <div class ="col-md-4">
+                    <div data-type="deposit" class ="bicon purple">
+                        <i class="fa fa-money-bill-wave"></i>
+                    </div>
+                    <h3>Депозит</h3>
+
+                </div>
+                <div class ="col-md-4">
+                    <div data-type="loan" class ="bicon yellow">
+                        <i class="fa fa-credit-card"></i>
+                    </div>
+                    <h3>Кредит</h3>
+                </div>
+                <div class ="col-md-4">
+                    <div data-type="shopping" class ="bicon green">
+                        <i class="fa fa-tshirt"></i>
+                    </div>
+                    <h3>Одежда</h3>
+                </div>
+
+            </div>
+
+
+            <div class ="row">
+                <div class ="col-md-4">
+                    <div data-type="communal" class ="bicon blue">
+                        <i class="fa fa-home"></i>
+                    </div>
+                    <h3>Коммунальные <br> платежи</h3>
+                </div>
+                <div class ="col-md-4">
+                    <div data-type="food" class ="bicon pink">
+                        <i class="fa fa-utensils"></i>
+                    </div>
+                    <h3>Продукты</h3>
+                </div>
+                <div class ="col-md-4">
+                    <div data-type="vehicle" class ="bicon grey">
+                        <i class="fa fa-car"></i>
+                    </div>
+                    <h3>Транспорт</h3>
+                </div>
+            </div>
+
+
+            <div class ="row">
+                <div class ="col-md-4">
+                    <div data-type="entertainment" class ="bicon greenlight">
+                        <i class="fa fa-film"></i>
+                    </div>
+                    <h3>Развлечения</h3>
+                </div>
+                <div class ="col-md-4">
+                    <div data-type="medicine" class ="bicon orange">
+                        <i class="fa fa-prescription-bottle-alt"></i>
+                    </div>
+                    <h3>Медицинские <br>расходы</h3>
+                </div>
+                <div class ="col-md-4">
+                    <div data-type="small" class ="bicon red">
+                        <i class="fa fa-ellipsis-h"></i>
+                    </div>
+                    <h3>Мелкие расходы</h3>
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+        <div class = "container plan">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item active" aria-current="page">ВНЕСТИ БЮДЖЕТ НА МЕСЯЦ</li>
+                </ol>
+            </nav>
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                    <form id="formbudget">
+                        <div class="form-group">
+                            <input type="number" class="form-control" name="budget"   placeholder="Введите прибыль в этом месяце">
+                            <a href="" class="btn" id="confirmsum">подтвердить сумму</a>
+                        </div>
+
+
+                        <div class="form-group extrafield">
+                            <input  type="number" class="form-control"  name ="deposit" placeholder="Введите сумму внесения в депозит в этом месяце">
+                        </div>
+                        <div class="form-group extrafield">
+                            <input  type="number" class="form-control" name = "loan" placeholder="Введите сумму для погашения кредита в этом месяце">
+                        </div>
+                        <div class="form-group extrafield">
+                            <input  type="number" class="form-control" name = "shopping"  placeholder="Введите сумму запланированную на одежду в этом месяце">
+                        </div>
+                        <div class="form-group extrafield">
+                            <input  type="number" class="form-control" name="communal"  placeholder="Введите сумму запланированную на коммунальные платежи ">
+                        </div>
+                        <div class="form-group extrafield">
+                            <input  type="number" class="form-control" name="food"  placeholder="Введите сумму запланированную на продукты в этом месяце">
+                        </div>
+                        <div class="form-group extrafield">
+                            <input  type="number" class="form-control" name="vehicle"  placeholder="Введите сумму запланированную на транспорт в этом месяце">
+                        </div>
+                        <div class="form-group extrafield">
+                            <input  type="number" class="form-control" name="entertainment" placeholder="Введите сумму запланированную на развлечения в этом месяце">
+                        </div>
+                        <div class="form-group extrafield">
+                            <input  type="number" class="form-control" name ="medicine"  placeholder="Введите сумму запланированную на медицинские расходы ">
+                        </div>
+                        <div class="form-group extrafield">
+                            <input  type="number" class="form-control" name="small" placeholder="Введите сумму запланированную на мелкие расходы ">
+                        </div>
+
+
+                        <div class="form-group extrabtn"></div>
+
+
+
+                    </form>
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+
+
+        </div>
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+    <section class="footer"></section>
+<script src="public/js/budget.js"> </script>
+<script src="public/js/budgetAjax.js"></script>
+</body>
+</html>
